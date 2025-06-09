@@ -22,3 +22,11 @@ The following assumes the use of `node@>=10`.
 ## Run Tests
 
 `yarn test`
+
+## Deploy
+
+`RPC_URL` is optional, if not provided it will use http://localhost:8545
+
+```bash
+PRIVATE_KEY=0x RPC_URL=http://localhost:8545 yarn deploy
+```
