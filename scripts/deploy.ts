@@ -3,8 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 async function main() {
-  const RPC_URL = process.env.RPC_URL
-  if (!RPC_URL) throw new Error('RPC_URL env var required')
+  const RPC_URL = process.env.RPC_URL || 'http://localhost:8545'
   const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
   const PRIVATE_KEY = process.env.PRIVATE_KEY
   if (!PRIVATE_KEY) throw new Error('PRIVATE_KEY env var required')
